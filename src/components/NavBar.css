@@ -194,9 +194,13 @@
   color: #ecf0f1; 
 } 
 
-.dropdown-item.dropdown-logout:hover, .dropdown-item.dropdown-email:hover { 
-  background: #c0392b;
+.dropdown-item.dropdown-logout:hover{
+  background: #2c3e50;
 }
+
+.dropdown-item.dropdown-email:hover { 
+  background: #1abc9c;
+  }
 
 .hamburger div {
   width: 25px;

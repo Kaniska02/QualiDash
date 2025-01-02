@@ -151,7 +151,7 @@ function SignIn({ closeModal, handleLogin }) {
                 <button className="social-button google">
                   <FontAwesomeIcon icon={faGoogle} />
                   <span className="separator"></span>
-                  Sign in with Google
+                  Google
                 </button>
               </div>
               <div className="why-create-account">
