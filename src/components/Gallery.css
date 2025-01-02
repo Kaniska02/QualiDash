@@ -1,4 +1,3 @@
-/* General Styles */
 html, body {
     background-color: #ffffff;
     margin: 0;
@@ -12,12 +11,12 @@ html, body {
     display: flex; 
     align-items: center; 
     justify-content: center; 
-    height: 350px; /* Set a fixed height for the container */ }
+    height: 350px; }
 
 .g-gallery-image { 
     max-width: 100%; 
     max-height: 100%; 
-    object-fit: contain; /* Ensure the image fits within the container */ 
+    object-fit: contain; 
 } 
 
 .g-image-content-wrapper {
@@ -49,7 +48,6 @@ html, body {
     object-fit: cover;
 }
 
-/* Team Section Styles */
 .g-team-section {
     padding: 50px 20px;
     text-align: center;
@@ -183,7 +181,6 @@ html, body {
     margin-top: -4px;
 }
 
-/* Image and Content Section Styles */
 .g-image-content-section {
     display: flex;
     justify-content: center;
@@ -203,42 +200,23 @@ html, body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     position: absolute;
-    top: 50%; /* Center vertically */
+    top: 50%; 
     transform: translateY(-50%);
-    z-index: 10; /* Ensure button is on top of the image */
+    z-index: 10; 
 }
 
 .g-nav-button:first-of-type {
-    left: 20px; /* Adjust left arrow position */
+    left: 20px; 
 }
 
 .g-nav-button:last-of-type {
-    right: 20px; /* Adjust right arrow position */
+    right: 20px; 
 }
 
-/* Fix for the arrows to remain in place when images swap */
 .g-gallery-container {
     position: relative;
 }
 
-/* .g-image-content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
-} */
-
-/* .g-gallery-image {
-    width: 40%; /* Keep image size fixed 
-    max-width: 400px; /* Ensure consistent size 
-    height: auto; /* Maintain aspect ratio 
-    margin-right: 50px; /* Space between image and content 
-    object-fit: contain; /* Prevent distortion 
-    border-radius: 10px; /* Rounded corners 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-} */
 
 #gal-txt{
     color: #1abc9c;
@@ -269,7 +247,7 @@ html, body {
         top: 50%;
         transform: translateY(-50%);
         z-index: 10;
-        margin: 0 10px; /* Ensure space between the arrows and edges */
+        margin: 0 10px; 
     }
 
     .g-nav-button:first-of-type {
@@ -282,7 +260,6 @@ html, body {
         margin-top: -140px;
     }
 
-    /* For smaller screens */
     .g-carousel-container {
         flex-direction: column;
     }
@@ -290,7 +267,7 @@ html, body {
     .g-carousel-image-wrapper {
         width: 100%;
         margin: 10px 0;
-        opacity: 1; /* Remove opacity for better visibility */
+        opacity: 1; 
         transform: scale(1);
     }
 
@@ -324,16 +301,16 @@ html, body {
     .g-nav-button {
         padding: 10px 20px;
         position: absolute;
-        top: 50%; /* Center vertically */
+        top: 50%; 
     }
     .g-nav-button:first-of-type {
         left: 20px; 
-        margin-top: -80px;/* Adjust left arrow position */
+        margin-top: -80px;
     }
     
     .g-nav-button:last-of-type {
         right: 20px;
-        margin-top: -80px; /* Adjust right arrow position */
+        margin-top: -80px; 
     }  
 }
 

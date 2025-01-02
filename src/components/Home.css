@@ -1,4 +1,3 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +10,6 @@ body {
   line-height: 1.6;
 }
 
-/* Swiper Video Slider Section */
 .header_wrapper {
   position: relative;
   width: 100%;
@@ -24,13 +22,13 @@ body {
   width: 100%;
   height: 100%;
 }
-/* Swiper Navigation Arrows */
+
 .swiper-button-next, .swiper-button-prev {
-  color: rgb(248, 230, 230); /* Make arrows white */
+  color: rgb(248, 230, 230); 
 }
 
 .swiper-button-next:hover, .swiper-button-prev:hover {
-  color: black; /* Ensure the hover state is also white */
+  color: black;
 }
 
 .slide-video {
@@ -60,7 +58,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* Section: What is AQC */
 #about-aqc {
   padding: 50px 20px;
   background: #ffffff;
@@ -82,7 +79,6 @@ body {
   font-size: 20px;
 }
 
-/* Key Benefits Section */
 .key-benefits {
   padding: 20px;
   margin-top: -10px;
@@ -116,7 +112,7 @@ body {
   width: 330px;
   height: 370px;
   overflow: hidden;
-  border: none; /* No initial border */
+  border: none; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   transition: box-shadow 0.3s ease;
@@ -126,10 +122,10 @@ body {
 .benefit-card::after {
   content: '';
   position: absolute;
-  width: 0; /* Initial width */
-  height: 0; /* Initial height */
-  border: 2px solid black; /* The border style */
-  border-radius: 8px; /* Ensure rounded corners */
+  width: 0; 
+  height: 0;
+  border: 2px solid black; 
+  border-radius: 8px; 
   transition: all 0.5s ease;
   z-index: 2;
 }
@@ -150,12 +146,12 @@ body {
 
 .benefit-card:hover::before, 
 .benefit-card:hover::after {
-  width: 100%; /* Expand width on hover */
-  height: 100%; /* Expand height on hover */
+  width: 100%; 
+  height: 100%;
 }
 
 .benefit-card:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance box-shadow on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
 }
 
 .card-content {
@@ -171,7 +167,7 @@ body {
   font-weight: bold;
   font-size: 21px;
   color: black;
-  background-color: rgba(255, 255, 255, 0.6); /* Set background color with opacity */
+  background-color: rgba(255, 255, 255, 0.6); 
   width: 330px;
   margin-top: 20px;
   margin-left: -9px;
@@ -181,53 +177,52 @@ body {
 .card-description {
   font-size: 18px;
   font-weight: bold;
-  opacity: 0; /* Initially hidden */
-  transform: translateX(100%); /* Start off-screen to the right */
+  opacity: 0; 
+  transform: translateX(100%); 
   transition: transform 0.5s ease, opacity 0.5s ease;
-  display: flex; /* Use flexbox */
-  align-items: center; /* Center vertically */
+  display: flex; 
+  align-items: center; 
   text-align: left;
-  position: absolute; /* Position absolutely within the card */
-  top: 300%; /* Center vertically */
-  left: 4%; /* Align to the left edge of the card */
-  transform: translate(100%, -50%); /* Adjust position to off-screen and vertically centered */
+  position: absolute; 
+  top: 300%; 
+  left: 4%; 
+  transform: translate(100%, -50%); 
 }
 
 .card-image img {
   width: 100%;
   height: 370px;
   object-fit: cover;
-  transition: opacity 0.3s ease; /* Smooth fade-out effect */
+  transition: opacity 0.3s ease; 
 }
 
 .benefit-card:hover .card-description {
-  opacity: 1; /* Show description when hovered */
-  transform: translate(0, -50%); /* Slide in from the right */
+  opacity: 1; 
+  transform: translate(0, -50%); 
 }
 
 .benefit-card .card-description {
-  transform: translate(-100%, -50%); /* Slide out to the left when not hovered */
+  transform: translate(-100%, -50%); 
 }
 
 
 .benefit-card:hover .card-image img {
-  opacity: 0.4; /* Fade out the image when hovered */
+  opacity: 0.4;
 }
 
 .benefit-card:hover .card-title {
-   background-color: transparent; /* Remove background color when hovered */ 
+   background-color: transparent; 
   }
 
-/* Center the last two cards in the second row */ 
 .benefits-cards > .benefit-card:nth-child(4) {
-   grid-column: 1 / 3; /* Span across the first and second columns */ 
-   grid-row: 2; /* Place in the second row */ 
+   grid-column: 1 / 3; 
+   grid-row: 2; 
    margin-top: 60px;
   } 
   
   .benefits-cards > .benefit-card:nth-child(5) {
-     grid-column: 2 / 4; /* Span across the second and third columns */ 
-     grid-row: 2; /* Place in the second row */ 
+     grid-column: 2 / 4; 
+     grid-row: 2; 
      margin-top: 60px;
   }
 
@@ -250,7 +245,7 @@ body {
   width: 250px;
   height: 370px;
   overflow: hidden;
-  border: none; /* No initial border */
+  border: none; 
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 1);
   transition: box-shadow 0.3s ease;
@@ -274,7 +269,7 @@ body {
 }
 .swiper-button-next, .swiper-button-prev {
   font-size: 20px;
-  margin-top:-150px /* Adjust arrow size for smaller screens */
+  margin-top:-150px 
 }
 }
 
@@ -290,14 +285,14 @@ body {
   }
 
   .benefits-cards > .benefit-card:nth-child(4) {
-    grid-column: 1 / 3; /* Span across the first and second columns */ 
-    grid-row: 2; /* Place in the second row */ 
+    grid-column: 1 / 3; 
+    grid-row: 2;
     margin-top: 10px;
    } 
    
    .benefits-cards > .benefit-card:nth-child(5) {
-      grid-column: 2 / 4; /* Span across the second and third columns */ 
-      grid-row: 2; /* Place in the second row */ 
+      grid-column: 2 / 4; 
+      grid-row: 2;
       margin-top: 10px;
    }
   .card-title {
@@ -319,45 +314,44 @@ body {
   }
   .swiper-button-next, .swiper-button-prev {
     font-size: 20px;
-    margin-top:-150px /* Adjust arrow size for smaller screens */
+    margin-top:-150px 
   }
 
     .swiper-button-next, .swiper-button-prev {
-      font-size: 24px; /* Adjust arrow size for smaller screens */
+      font-size: 24px; 
     }
   
     .header_wrapper {
-      height: 500px; /* Adjust height for smaller screens */
+      height: 500px; 
       margin-top: -40px;
     }
   
     .benefits-cards {
-      grid-template-columns: 1fr 1fr; /* 2 cards per row on smaller screens */
+      grid-template-columns: 1fr 1fr; 
     }
   
     .case-studies-grid {
-      grid-template-columns: 1fr 1fr; /* Adjust grid for case studies */
+      grid-template-columns: 1fr 1fr; 
     }
   
     .trend-card {
-      width: 100%; /* Show only one trend card at a time on smaller screens */
+      width: 100%; 
     }
   
     .future-trends-grid {
-      flex-direction: column; /* Stack trend cards vertically on smaller screens */
+      flex-direction: column; 
     }
 
     .future-trends{
-      /* margin-right:30px; */
       padding-left:10px;
     }
   
     .key-benefits-title, .case-studies-title, .challenges-title, #future-trends-title {
-      font-size: 1.5rem; /* Adjust title size */
+      font-size: 1.5rem; 
     }
   
     .card-title, .card-description, .challenge-title, .challenge-content {
-      font-size: 14px; /* Reduce font size for smaller screens */
+      font-size: 14px; 
     }
 
     .overlay-message{
@@ -446,11 +440,10 @@ body {
 .challenges-list {
   display: flex;
   flex-direction: column;
-  gap: 30px; /* Increase the gap between items */
+  gap: 30px; 
   padding: 20px;
 }
 
-/* Individual challenge item */
 .challenge-item {
   position: relative;
   background: rgb(231, 228, 228);
@@ -462,7 +455,6 @@ body {
   cursor: pointer;
 }
 
-/* Background image for challenge item */
 .challenge-item::before {
   content: "";
   position: absolute;
@@ -472,12 +464,11 @@ body {
   height: 200px;
   background-size: cover;
   background-position: center;
-  opacity: 0; /* Invisible initially */
+  opacity: 0; 
   transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 1; /* Below the content */
+  z-index: 1; 
 }
 
-/* Assign specific images to each challenge item */
 .challenge-item:nth-child(1)::before {
   background-image: url("../assets/challenge1.jpg");
 }
@@ -494,10 +485,9 @@ body {
   background-image: url("../assets/challenge5.png");
 }
 
-/* Content visibility */
 .challenge-title {
   position: relative;
-  z-index: 2; /* Above the background */
+  z-index: 2;
   color: black;
   font-size: 1.5rem;
 }
@@ -505,41 +495,38 @@ body {
 .challenge-content {
   position: relative;
   z-index: 2;
-  display: none; /* Hidden by default */
+  display: none;
   font-size: 0.9rem;
   margin-top: 10px;
   font-weight: bold;
 }
 
-/* Hover effect for the active challenge item */
+
 .challenge-item.hovered {
-  transform: scaleY(1.35); /* Scale all items to the same size */
-  z-index: 2; /* Bring to front */
+  transform: scaleY(1.35); 
+  z-index: 2; 
 }
 
 .challenge-item.hovered .challenge-content {
-  display: block; /* Show content on hover */
+  display: block;
 }
 
 .challenge-item.hovered::before {
-  opacity: 0.6; /* Slightly more visible */
-  transform: scaleY(1); /* Slightly larger image for better visibility */
+  opacity: 0.6; 
+  transform: scaleY(1); 
 }
 
-/* Blur other items */
 .challenge-item:not(.hovered) {
-  transform: scale(1); /* Keep other items at the default size */
+  transform: scale(1); 
 }
 
-/* Show the challenge content only when hovered */
 .challenge-item:hover .challenge-content {
-  display: block; /* Display content when hovered */
+  display: block; 
 }
 
 .challenge-item:not(:hover) .challenge-content {
-  display: none; /* Hide content when not hovered */
+  display: none; 
 }
-
 
 
 /* Section: Future Trends */
@@ -559,30 +546,30 @@ body {
   margin: 0 auto;
   overflow: hidden;
   align-items: center;
-  position: relative; /* Ensure the swiper container is positioned relative */
+  position: relative; 
 }
 
 .swiper-pagination {
   position: relative;
-  margin-top: 20px; /* Adjust this value to move the pagination icons down */
+  margin-top: 20px; 
   left: 50%;
-  z-index: 10; /* Ensure the pagination icons are above other elements */
+  z-index: 10; 
 }
 
 
 .trend-card {
   position: relative;
-  width: 100%; /* Ensure each trend card takes full width of its container */
+  width: 100%; 
   transition: transform 0.3s ease-in-out;
-  overflow: hidden; /* Ensure border-radius is applied */
-  border-radius: 20px; /* Ensure the border radius remains curved */
+  overflow: hidden; 
+  border-radius: 20px; 
 }
 
 .trend-image {
   width: 100%;
   height: 350px;
-  object-fit: cover; /* Ensure the image covers the entire area */
-  border-radius: 20px; /* Ensure the border radius remains curved */
+  object-fit: cover; 
+  border-radius: 20px; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
@@ -594,35 +581,35 @@ body {
 
 .trend-content {
   position: absolute;
-  bottom: -100%; /* Start off-screen at the bottom */
+  bottom: -100%; 
   left: 0;
   width: 100%;
   height: 330px;
-  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  background-color: rgba(0, 0, 0, 0.7); 
   color: white;
   padding: 20px;
   text-align: center;
-  transition: bottom 2s ease; /* Smooth slide-in effect */
+  transition: bottom 2s ease; 
 }
 
 .trend-card.middle .trend-content {
-  bottom: 0; /* Slide in to the bottom of the card */
+  bottom: 0; 
   height:auto;
 }
 
 .trend-card.middle .trend-image {
-  transform: scale(1.2); /* Enlarge the middle image */
-  z-index: 1; /* Bring the enlarged image to the front */
-  border-radius: 20px; /* Ensure the border radius remains curved */
+  transform: scale(1.2); 
+  z-index: 1;
+  border-radius: 20px; 
 }
 
 
 @media (max-width: 768px) {
   .trend-card {
-    width: 100%; /* Ensure each trend card takes full width on smaller screens */
+    width: 100%; 
   }
   .trend-image {
-    height: 250px; /* Adjust height for smaller screens */
+    height: 250px; 
   }
 
   .trend-card.middle .trend-content{
@@ -631,7 +618,6 @@ body {
 }
 
 /* Sponsors Section */
-
 #sponsers{
   
   background: #d8ddee;
@@ -690,20 +676,19 @@ body {
     top: 22%;
     padding: 20px;
   }
-  /* Swiper Navigation Arrows */
+
 .swiper-button-next, .swiper-button-prev {
   color: white;
-  margin-top: -300px; /* Make arrows white */
+  margin-top: -300px; 
 }
 .benefits-cards {
-  grid-template-columns: 1fr 1fr; /* 2 cards per row on smaller screens */
+  grid-template-columns: 1fr 1fr; 
   margin-left: 15px;
   margin-right: 15px;
 }
  
 }
 
-/* For screens larger than 1240px */
 @media screen and (min-width: 1240px) {
   .container {
     display: flex;
@@ -713,7 +698,6 @@ body {
   }
 }
 
-/* For screens between 768px and 1240px */
 @media screen and (max-width: 1240px) and (min-width: 768px) {
   .container {
     display: block;
@@ -724,7 +708,7 @@ body {
   }
 }
 
-/* For screens smaller than 768px */
+
 @media screen and (max-width: 768px) {
   .container {
     display: block;
@@ -741,7 +725,6 @@ body {
   }
 }
 
-/* For screens smaller than 480px */
 @media screen and (max-width: 480px) {
   .container {
     padding: 10px;

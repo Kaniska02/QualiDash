@@ -1,13 +1,13 @@
 
   
   .promise-container {
-    width: 60%; /* Make the container span the full width of the screen */
-    margin: 0 auto; /* Remove automatic centering */
+    width: 60%; 
+    margin: 0 auto;
     padding: 20px;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #E5F3FC; /* Set background color to pure white */
-    box-sizing: border-box; /* Include padding in the width calculation */
+    background-color: #E5F3FC; 
+    box-sizing: border-box; 
     border-radius: 10px;
     border: 3px #10182f solid;
     margin-top: 20px;

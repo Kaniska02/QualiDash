@@ -10,24 +10,21 @@
     margin: auto;
     margin-top: 40px;
     margin-bottom: 40px;
-    text-align: center; /* Center the text */
+    text-align: center; 
   }
   
-  /* Checkmark styling */
   .checkmark {
     font-size: 24px;
     color: #00796b;
     margin-bottom: 10px;
   }
   
-  /* Thank you text styling */
   .feedsub-thank-you {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
   }
   
-  /* Footer text styling */
   .feedsub-footer {
     height: 85px;
     font-size: 14px;
@@ -37,7 +34,6 @@
     text-align: center;
   }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
     .feedsub-container {
         width: 60%;

@@ -6,8 +6,8 @@ const FeedbackForm = () => {
   const [rating, setRating] = useState(0);
   const [feedback, setFeedback] = useState('');
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [error, setError] = useState(''); // State to handle error messages
-  const [loading, setLoading] = useState(false); // State to handle loading spinner
+  const [error, setError] = useState(''); 
+  const [loading, setLoading] = useState(false); 
 
   const handleStarClick = (index) => {
     setRating(index + 1);
@@ -20,13 +20,11 @@ const FeedbackForm = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    // Validate rating and feedback
     if (rating === 0 || feedback.trim() === '') {
       setError('Please provide a rating and feedback before submitting.');
       return; 
     }
 
-    // Set loading to true when submission starts
     setLoading(true);
 
     try {
@@ -38,31 +36,26 @@ const FeedbackForm = () => {
         body: JSON.stringify({ rating, feedback }),
       });
 
-      // Check if the response is OK
       if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
       }
 
-      const responseData = await response.json(); // Parse the response
+      const responseData = await response.json(); 
 
       if (response.ok) {
-        // Successfully submitted the feedback
         console.log('Feedback submitted successfully');
-        setIsSubmitted(true); // Show FeedbackSubmit component after submission
-        setError(''); // Reset error message
-        setRating(0); // Clear rating
-        setFeedback(''); // Clear feedback text
+        setIsSubmitted(true); 
+        setError(''); 
+        setRating(0); 
+        setFeedback(''); 
       } else {
-        // Handle error
         console.error('Error submitting feedback:', responseData);
         setError(responseData.message || 'Error submitting feedback. Please try again.');
       }
     } catch (error) {
-      // Handle unexpected errors (e.g., network issues)
       console.error('Error submitting feedback:', error);
       setError('An unexpected error occurred. Please try again later.');
     } finally {
-      // Set loading to false when the request is complete
       setLoading(false);
     }
   };
@@ -100,11 +93,11 @@ const FeedbackForm = () => {
           <button
             className="feedback-button"
             onClick={handleSubmit}
-            disabled={loading} // Disable button while submitting
+            disabled={loading} 
           >
             {loading ? 'Submitting...' : 'Share my feedback'}
           </button>
-          {error && <p className="error-message">{error}</p>} {/* Show error message if validation fails */}
+          {error && <p className="error-message">{error}</p>} 
         </>
       )}
     </div>

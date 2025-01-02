@@ -21,14 +21,12 @@ import "./App.css";
 
 function App() {
   const [isModalOpen, setModalOpen] = useState(false);
-  const [isAuthenticated, setIsAuthenticated] = useState(
-    localStorage.getItem("isAuthenticated") === "true" 
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(localStorage.getItem("isAuthenticated") === "true");
+  const [displayedUsername, setDisplayedUsername] = useState(localStorage.getItem("displayedUsername") || '');
   const [userRole, setUserRole] = useState(localStorage.getItem("userRole") || "Production-Manager"); // Default role
   const [showCookieSettings, setShowCookieSettings] = useState(false);
   const location = useLocation();
   
-
   const toggleCookieSettings = (show) => { setShowCookieSettings(show); };
   
   useEffect(() => {
@@ -44,25 +42,29 @@ function App() {
     setModalOpen(false);
   };
 
-  const handleLogin = (role) => {
+  const handleLogin = (role, fullName) => {
     setIsAuthenticated(true);
-    setUserRole(role); // Set role when login is successful
+    setUserRole(role); 
+    setDisplayedUsername(fullName);
     localStorage.setItem("isAuthenticated", "true");
-    localStorage.setItem("userRole", role); // Save role to localStorage
+    localStorage.setItem("userRole", role);
+    localStorage.setItem("displayedUsername", fullName);
     closeModal(); 
   };
 
   const handleLogout = () => {
     setIsAuthenticated(false);
-    setUserRole("viewer"); // Reset user role to viewer after logout
+    setUserRole("viewer"); 
+    setDisplayedUsername('');
     localStorage.removeItem("isAuthenticated");
     localStorage.removeItem("userRole");
+    localStorage.removeItem("displayedUsername");
     alert("Logged out!");
   };
 
   return (
     <div className="App">
-      <NavBar openModal={openModal} isAuthenticated={isAuthenticated} handleLogout={handleLogout} />
+      <NavBar openModal={openModal} isAuthenticated={isAuthenticated} handleLogout={handleLogout} displayedUsername={displayedUsername} />
       <div className="main-content">   
         <Routes>
           <Route path="/" element={<Home />} />

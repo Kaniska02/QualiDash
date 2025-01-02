@@ -35,7 +35,7 @@ function Contact() {
         form.current.reset();
         setTimeout(() => {
           setShowThankYou(false);
-        }, 3000); // Hide the message after 3 seconds
+        }, 3000); 
       } else {
         console.log('Server error');
       }
@@ -114,7 +114,7 @@ function Contact() {
         <div className="map-container">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.3950749934866!2d80.20897938885498!3d13.074129500000009!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266a2b44ea549%3A0x24732a5af8f16afd!2sDwaraka%20Doss%20Goverdhan%20Doss%20Vaishnav%20College!5e0!3m2!1sen!2sin!4v1734406125818!5m2!1sen!2sin"
-            title="Google Map"  // Added title attribute for accessibility
+            title="Google Map"  
             allowFullScreen
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"

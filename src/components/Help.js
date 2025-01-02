@@ -14,21 +14,18 @@ const Help = () => {
   };
 
   useEffect(() => {
-    // Select the email element
+
     const emailElement = document.querySelector('a[href="mailto:qualidash@gmail.com"]');
     
-    // Apply styles to the email element
     if (emailElement) {
-      emailElement.style.fontWeight = 'bold';  // Make it bold
-      emailElement.style.color = '#10182f';    // Change color to #10182f
+      emailElement.style.fontWeight = 'bold';  
+      emailElement.style.color = '#10182f';    
     }
 
-    // Select all 'li' elements and manually check for the phone number
     const phoneElements = document.querySelectorAll('li');
     phoneElements.forEach((element) => {
       if (element.textContent.includes("Phone: 9876543210")) {
-        element.style.fontWeight = 'bold';  // Make the phone number bold
-        // No color styling for phone number text
+        element.style.fontWeight = 'bold';  
       }
     });
   }, []);

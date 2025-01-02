@@ -49,9 +49,7 @@
     cursor: pointer;
 }
 
-/* Responsive Styles */
 @media (max-width: 1024px) {
-    /* Tablet Devices */
     .feedback-container {
         width: 80%;
         padding: 15px;
@@ -69,7 +67,6 @@
 }
 
 @media (max-width: 768px) {
-    /* Mobile Devices */
     .feedback-container {
         width: 90%;
         padding: 15px;
@@ -79,7 +76,7 @@
 
     .feedback-stars {
         flex-direction: row;
-        gap: 5px; /* Add space between stars */
+        gap: 5px;
     }
 
     .feedback-textarea {

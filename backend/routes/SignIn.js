@@ -1,11 +1,10 @@
 const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-const User = require('../models/SignIn'); // Import User model from SignIn.js
+const User = require('../models/SignIn'); 
 
 const router = express.Router();
 
-// Sign-up route 
 router.post('/signup', async (req, res) => { 
   const { fullName, email, password, role } = req.body; 
   try { 
@@ -23,7 +22,6 @@ router.post('/signup', async (req, res) => {
   } 
 });
 
-// Sign-in route
 router.post('/signin', async (req, res) => {
   const { email, password } = req.body;
 

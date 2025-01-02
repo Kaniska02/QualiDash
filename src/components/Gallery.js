@@ -9,7 +9,7 @@ import teamImage5 from "../assets/team5.jpeg";
 import img1 from "../assets/img1.jpeg";
 import img2 from "../assets/img2.jpg";
 import img3 from "../assets/img3.jpg";
-import { FaArrowUp } from 'react-icons/fa'; // For the up arrow button
+import { FaArrowUp } from 'react-icons/fa'; 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 import {

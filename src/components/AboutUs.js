@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './AboutUs.css';
 import aboutImage from '../assets/header-bg.webp';
-import companyVideo from '../assets/abt.mp4'; // Import the video
+import companyVideo from '../assets/abt.mp4'; 
 import i1 from "../assets/tcs.png";
 import i2 from "../assets/Schneider_Electric.png";
 import i3 from "../assets/Hexagon.webp";
@@ -10,8 +10,8 @@ import i4 from "../assets/GE-Symbol.png";
 import i5 from "../assets/ford.jpg";
 import i6 from "../assets/Bosch_Rexroth.png";
 import i7 from "../assets/Cognex.png";
-import { FaArrowUp } from 'react-icons/fa'; // For the up arrow button
-import founderImage from "../assets/founder.jpeg"; // Import the image
+import { FaArrowUp } from 'react-icons/fa'; 
+import founderImage from "../assets/founder.jpeg"; 
 import { Link } from 'react-router-dom'; 
 
 const images = [i1, i2, i3, i4, i5, i6, i7];
@@ -247,7 +247,7 @@ function About() {
               Grace<br />
               Founder and Executive Chairman, QualiDash
             </cite ><br></br>
-            <a href="#" className="promise-link"><Link to="/galpromise">The QualiDash promise</Link></a>
+            <a href="#" className="promise-link" onClick={scrollToTop}><Link to="/galpromise">The QualiDash promise</Link></a>
           </div>
           <div className="testimonial-image">
             <img src={founderImage} alt="Grace" />

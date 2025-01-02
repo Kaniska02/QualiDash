@@ -5,7 +5,7 @@ const feedbackSchema = new mongoose.Schema({
     type: Number,
     required: true,
     min: 1,
-    max: 5, // Assuming a rating scale of 1 to 5
+    max: 5, 
   },
   feedback: {
     type: String,

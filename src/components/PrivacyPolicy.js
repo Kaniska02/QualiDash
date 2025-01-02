@@ -3,7 +3,7 @@ import "./Privacy_Terms.css";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-terms-container"> {/* Add the new class here */}
+    <div className="privacy-terms-container"> 
       <h2>Privacy Policy</h2>
       <div className="gradient-line"></div>
       <p><strong>Effective Date:</strong> December 18, 2024</p>

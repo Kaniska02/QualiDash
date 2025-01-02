@@ -1,11 +1,10 @@
 const express = require('express');
-const Feedback = require('../models/FeedbackForm'); // Ensure the correct model path
+const Feedback = require('../models/FeedbackForm'); 
 const nodemailer = require('nodemailer');
 require('dotenv').config();
 
 const router = express.Router();
 
-// Email Configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -14,7 +13,6 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Route to submit feedback
 router.post('/submit', async (req, res) => {
   const { rating, feedback } = req.body;
 
@@ -24,7 +22,7 @@ router.post('/submit', async (req, res) => {
     await newFeedback.save();
     res.status(201).json({ message: 'Feedback submitted successfully' });
 
-    // Send email notification
+  
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: 'contactqualidash@gmail.com',

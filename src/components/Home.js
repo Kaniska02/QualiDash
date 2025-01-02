@@ -158,8 +158,8 @@ const Home = () => {
       document.querySelectorAll('.trend-content').forEach(
         content => { content.style.animation = 'slideInOut 7s ease forwards'; 
 
-        }); }, 4000); // Wait for 3 seconds before starting the animation 
-        }, 8000); // Change image every 7 seconds 
+        }); }, 4000); 
+        }, 8000); 
         }, [changeImage]);
 
 useEffect(() => {
@@ -228,10 +228,10 @@ useEffect(() => {
             <div className="benefit-card" key={index}>
               <div className="card-content">
                 <div className="card-title">
-                  {benefit.text.split(":")[0]} {/* Title part before ":" */}
+                  {benefit.text.split(":")[0]} 
                 </div>
                 <div className="card-description">
-                  {benefit.text.split(":")[1]} {/* Description part after ":" */}
+                  {benefit.text.split(":")[1]} 
                 </div>
               </div>
               <div className="card-image">
@@ -288,14 +288,14 @@ useEffect(() => {
         <Swiper
           className="future-trends-swiper"
           modules={[Pagination, Navigation, Autoplay]}
-          slidesPerView={3} // Show 3 trends at a time
-          spaceBetween={20} // Adjust space between the trends
+          slidesPerView={3} 
+          spaceBetween={20} 
           loop={true}
           autoplay={{
             delay: 7000,
             disableOnInteraction: false,
           }}
-          pagination={{ clickable: true }} // Add pagination to navigate through trends
+          pagination={{ clickable: true }} 
           onSlideChange={(swiper) => setCurrentIndex(swiper.realIndex)}
         >
           {futureTrends.map((trend, index) => (

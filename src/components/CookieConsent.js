@@ -1,31 +1,29 @@
 import React, { useState, useEffect } from 'react';
 import './CookieConsent.css';
-import cookieImage from '../assets/QD.png'; // Path to the image file
+import cookieImage from '../assets/QD.png'; 
 
 const CookieConsent = ({ toggleSettings }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    // Check local storage for user's choice
     const cookieConsent = localStorage.getItem('cookieConsent');
     if (!cookieConsent) {
-      setIsVisible(true); // Show popup if no consent is found
+      setIsVisible(true); 
     }
   }, []);
 
   const handleConsent = (choice) => {
     console.log(`User chose: ${choice}`);
     if (choice === 'I want to choose') {
-      toggleSettings(); // Trigger the toggle function passed via props
+      toggleSettings(); 
     }
-    localStorage.setItem('cookieConsent', choice); // Store user's choice in local storage
-    setIsVisible(false); // Hide the popup after making a choice
+    localStorage.setItem('cookieConsent', choice); 
+    setIsVisible(false); 
   };
 
   return (
     isVisible && (
       <>
-        {/* Background dim overlay */}
         <div className="overlay"></div>
         <div className="cookie-consent">
           <div className="cookie-content">

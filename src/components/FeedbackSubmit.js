@@ -1,14 +1,12 @@
 import React, { useEffect } from 'react';
-import './FeedbackSubmit.css'; // Make sure to create a CSS file for styling
+import './FeedbackSubmit.css'; 
 
 const FeedbackSubmit = () => {
   useEffect(() => {
-    // Automatically redirect to Help page after 2 seconds
     const timer = setTimeout(() => { 
-      window.location.href = '/help'; // Redirect to Help page 
+      window.location.href = '/help'; 
     }, 2000);
 
-    // Cleanup the timer when component unmounts
     return () => clearTimeout(timer);
   }, []);
 

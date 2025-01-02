@@ -13,7 +13,7 @@ function SignIn({ closeModal, handleLogin }) {
   const [role, setRole] = useState("");
   const [rememberMe, setRememberMe] = useState(false);
   const [message, setMessage] = useState("");
-
+  
   const handleLinkClick = (e) => {
     e.stopPropagation();
     closeModal();
@@ -29,27 +29,34 @@ function SignIn({ closeModal, handleLogin }) {
           },
           body: JSON.stringify({ email: username, password }),
         });
-  
+
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-  
+
         const data = await response.json();
+        console.log('API Response:', data); // Log the API response
+
         if (response.ok) {
           console.log('Sign-in successful:', data);
+
+          // Use fullName from response, if available, otherwise fallback to username
+          const userFullName = data.fullName || username; 
           if (data.role) {
             console.log('User Role:', data.role);
-            handleLogin(data.role);
+            console.log('User Full Name:', userFullName); // Log full name or username
+            handleLogin(data.role, userFullName);
           } else {
             console.error('Role not found in response');
           }
+
           if (rememberMe) {
             localStorage.setItem('token', data.token);
           } else {
             sessionStorage.setItem('token', data.token);
           }
           setMessage("Sign-in successful!");
-          closeModal(); // Ensure closeModal is called here
+          closeModal();
         } else {
           console.error('Sign-in error:', data.error);
           setMessage(`Sign-in error: ${data.error}`);
@@ -64,7 +71,7 @@ function SignIn({ closeModal, handleLogin }) {
   };
 
   const handleSignUp = async () => {
-    if (email && password && role) {
+    if (email && password && role && username) {
       try {
         const response = await fetch('https://qualidash-backend.onrender.com/api/auth/signup', {
           method: 'POST',
@@ -78,12 +85,12 @@ function SignIn({ closeModal, handleLogin }) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         const data = await response.json();
-
+        console.log('API Response:', data);
         if (response.ok) {
           console.log('Sign-up successful:', data);
           setMessage('Sign-up successful!');
-          handleLogin(data.role);
-          closeModal(); // Ensure closeModal is called here
+          handleLogin(data.role, username);
+          closeModal(); 
         } else {
           console.error('Sign-up error:', data.error);
           setMessage(`Sign-up error: ${data.error}`);
@@ -271,8 +278,6 @@ function SignUpForm({ handleSignUp, setEmail, setPassword, setRole, setUsername 
     </form>
   );
 }
-
-
 
 function ProfileIcon({ username, handleLogout }) {
   return (

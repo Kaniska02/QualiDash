@@ -1,21 +1,20 @@
-/* Provided Help Page Styles */
 body {
-    background-color: white; /* Set the whole body's background to white */
+    background-color: white; 
 }
 
 .help-page {
     margin: 20px;
     font-family: Arial, sans-serif;
-    padding-left: 20px; /* Aligning content to the left with 20px padding */
-    background-color: white; /* Ensuring the page background is white */
+    padding-left: 20px; 
+    background-color: white; 
 }
 
 #help-h4 {
-    font-size: 250%; /* Style for h4 elements */
-    color: transparent; /* Making the text transparent to show the gradient */
-    background: linear-gradient(to right, #10182f, #1abc9c); /* Gradient color */
-    -webkit-background-clip: text; /* Clip the gradient to the text */
-    background-clip: text; /* Clip the gradient to the text */
+    font-size: 250%; 
+    color: transparent; 
+    background: linear-gradient(to right, #10182f, #1abc9c); 
+    -webkit-background-clip: text; 
+    background-clip: text; 
     margin-top: 10px;
 }
 
@@ -28,7 +27,7 @@ body {
 }
 
 #help-p { 
-    color: black; /* Set the color of p tag text to black */
+    color: black; 
 }
 
 #help-container {
@@ -40,18 +39,18 @@ body {
 }
 
 #help-h2 {
-    font-size: 1.6em; /* Larger subheadings */
+    font-size: 1.6em; 
     color: #1abc9c;
     margin-top: -30px;
 }
 
 #help-h3 {
-    font-size: 1.2em; /* Slightly larger #help-h3 for better visibility */
+    font-size: 1.2em; 
     margin-top: 10px;
-    list-style-type: disc; /* Bullet point for #help-h3 */
-    margin-left: 20px; /* Indent to align with list */
-    display: list-item; /* Display #help-h3 as list item */
-    color: #10182f; /* Color for #help-h3 and bullet points */
+    list-style-type: disc; 
+    margin-left: 20px; 
+    display: list-item;
+    color: #10182f; 
 }
 
 ul {
@@ -60,12 +59,12 @@ ul {
 }
 
 li::marker {
-    margin-bottom: 10px; /* Set the bullet point (circle) color to green */
+    margin-bottom: 10px; 
 }
 
 a {
-    color: #10182f; /* Color for email and phone text */
-    text-decoration: none; /* Remove underline from links */
+    color: #10182f; 
+    text-decoration: none; 
 }
 
 a:hover {
@@ -74,15 +73,14 @@ a:hover {
 
 .help-page-link {
     color: blue;
-    text-decoration: none; /* Remove underline from Feedback Form link */
+    text-decoration: none; 
     cursor: pointer;
 }
 
 .help-page-link:hover {
-    text-decoration: underline; /* Underline on hover for Feedback Form link */
+    text-decoration: underline; 
 }
 
-/* Modal Styles */
 .help-page-modal-overlay {
     position: fixed;
     top: 0;
@@ -100,7 +98,7 @@ a:hover {
     padding: 20px;
     border-radius: 8px;
     width: 400px;
-    position: relative; /* Add relative position for the close button */
+    position: relative; 
 }
 
 .help-page-close-button {
@@ -109,87 +107,85 @@ a:hover {
     font-size: 20px;
     color: #333;
     position: absolute;
-    top: 10px; /* Position 10px from the top */
-    right: 10px; /* Position 10px from the right */
+    top: 10px; 
+    right: 10px; 
     cursor: pointer;
 }
 
-/* Ensuring the email word color is #10182f */
 .contact-email,
 .contact-phone {
     color: black;
     font-weight: bold;
 }
 
-/* Responsive Styles for Tablet and Mobile Sizes */
 @media (max-width: 1024px) {
-    /* Tablet devices */
+    
     #help-h4 {
-        font-size: 200%; /* Smaller font size for tablet */
+        font-size: 200%; 
     }
 
     #help-h2 {
-        font-size: 1.4em; /* Slightly smaller heading on tablets */
+        font-size: 1.4em; 
     }
 
     #help-h3 {
-        font-size: 1.1em; /* Slightly smaller list item font */
+        font-size: 1.1em; 
     }
 
     .help-page-gradient-line {
-        width: 30%; /* Adjust the width of the gradient line */
+        width: 30%; 
     }
 
     .help-page-modal {
-        width: 350px; /* Adjust modal width for tablet */
+        width: 350px; 
     }
 
     #help-container {
-        margin-left: 0; /* Reset margin for better alignment */
+        margin-left: 0; 
     }
 
 
 }
 
 @media (max-width: 768px) {
-    /* Mobile devices */
+    
     body {
-        padding: 10px; /* Add padding to the body */
+        padding: 10px; 
     }
 
     #help-h4 {
-        font-size: 150%; /* Smaller font size for mobile */
+        font-size: 150%; 
     }
 
     #help-h2 {
-        font-size: 1.2em; /* Smaller subheading for mobile */
+        font-size: 1.2em; 
     }
 
     #help-h3 {
-        font-size: 1em; /* Smaller list item font */
+        font-size: 1em; 
     }
 
     .help-page-gradient-line {
-        width: 50%; /* Adjust the width of the gradient line for mobile */
+        width: 50%; 
     }
 
     .help-page-modal {
-        width: 300px; /* Adjust modal width for mobile */
+        width: 300px; 
     }
 
     .help-page-close-button {
-        font-size: 18px; /* Smaller close button for mobile */
+        font-size: 18px; 
     }
 
     ul {
-        padding-left: 15px; /* Slight padding for mobile */
+        padding-left: 15px; 
     }
 
     #help-container {
-        margin-left: 0; /* Reset margin for better alignment */
+        margin-left: 0; 
     }
 
     .help-page {
-        padding-left: 10px; /* Adjust padding for mobile */
+        padding-left: 10px; 
     }
 }

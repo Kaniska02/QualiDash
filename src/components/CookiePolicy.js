@@ -1,15 +1,12 @@
 import React, { useState } from "react";
-import "./CookiePolicy.css"; // CSS file for styling
-import cookieImage from "../assets/QD.png"; // Add a suitable image for cookies
-import { Navigate } from "react-router-dom";
+import "./CookiePolicy.css"; 
+import cookieImage from "../assets/QD.png"; 
+
 
 const CookiesPolicy = () => {
-  const [isVisible, setIsVisible] = useState(true); // State to toggle visibility
-  const [redirectToHome, setRedirectToHome] = useState(false);
+  const [isVisible, setIsVisible] = useState(true); 
 
-
-
-  if (!isVisible) return null; // Return nothing if the policy is not visible
+  if (!isVisible) return null; 
 
   const cookieTypes = [
     { name: "Performance Cookies", description: "Used to collect information on how users interact with the quality control dashboard, helping to improve performance.", duration: "Up to 2 years" },

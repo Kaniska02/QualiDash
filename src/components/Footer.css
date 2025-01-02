@@ -1,4 +1,3 @@
-/* General Footer Styling */
 .footer {
   background-color: #10182f;
   color: #ffffff;
@@ -12,17 +11,17 @@
   padding: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  flex-wrap: wrap; /* Allow flex items to wrap on small screens */
+  flex-wrap: wrap; 
 }
 
 .footer-section {
   flex: 1;
   margin: 0 15px;
-  text-align: left; /* Ensure left alignment */
+  text-align: left; 
 }
 
 .popular-links {
-  margin-left: 75px; /* Adjust this value for the desired spacing */
+  margin-left: 75px; 
 }
 
 .useful-links{
@@ -31,14 +30,14 @@
 
 .footer-section h3 {
   color: #1abc9c;
-  margin-bottom: 20px; /* Consistent spacing below headers */
+  margin-bottom: 20px; 
   font-size: 23px;
-  text-align: left; /* Align with links */
+  text-align: left; 
 }
 
 .footer-section p,
 .footer-section ul {
-  margin-bottom: 15px; /* Equal vertical spacing between elements */
+  margin-bottom: 15px; 
   margin-right: 20px;
   font-size: 15px;
 }
@@ -46,7 +45,7 @@
 .footer-section ul {
   list-style: none;
   padding: 0;
-  margin: 0; /* Remove extra spacing */
+  margin: 0; 
 }
 
 .footer-section li {
@@ -93,8 +92,8 @@
   border-radius: 40%;
   padding: 10px;
   box-sizing: border-box;
-  height: 40px; /* Fixed height */
-  width: 40px; /* Fixed width */
+  height: 40px; 
+  width: 40px; 
 }
 
 .footer-icons svg:hover {
@@ -103,9 +102,8 @@
   border: 2px solid #1abc9c;
 }
 
-/* Locate Us Button */
 .locate-us-button {
-  margin-top: 20px; /* Consistent vertical spacing */
+  margin-top: 20px; 
   display: inline-block;
   background-color: #1abc9c;
   color: #ffffff;
@@ -126,18 +124,17 @@
   margin-top: 20px;
   padding-top: 10px;
   font-size: 15px;
-  position: relative; /* Required for the pseudo-element */
+  position: relative; 
 }
 
-/* Add a pseudo-element for the gradient border */
 .footer-bottom::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1px; /* Adjust height of the gradient border */
-  background: linear-gradient(45deg, #1abc9c, #faff5f, #eb6803, #00c6ff, #0072ff); /* Vibrant gradient colors */
+  height: 1px; 
+  background: linear-gradient(45deg, #1abc9c, #faff5f, #eb6803, #00c6ff, #0072ff); 
 }
 
 .footer-brand {
@@ -155,16 +152,15 @@
   transform: scale(1.3); 
 }
 
-/* Responsive Design for Footer */
 @media screen and (max-width: 768px) {
   .footer-container {
     flex-direction: column;
     align-items: center;
-    text-align: center; /* Center align text for smaller screens */
+    text-align: center; 
   }
 
   .footer-section {
-    margin-bottom: 20px; /* Add spacing between sections */
+    margin-bottom: 20px; 
   }
 
   .footer-icons {
@@ -174,22 +170,22 @@
 
 @media screen and (max-width: 480px) {
   .footer-container {
-    padding: 10px; /* Reduce padding for smaller screens */
+    padding: 10px; 
   }
 
   .footer-section h3 {
-    font-size: 16px; /* Adjust header font size */
+    font-size: 16px; 
   }
 
   .footer-section p,
   .footer-section ul {
-    font-size: 13px; /* Adjust text font size */
+    font-size: 13px; 
   }
 
   .footer-icons svg {
-    font-size: 18px; /* Adjust icon size */
-    padding: 8px; /* Adjust padding */
-    height: 35px; /* Adjust height */
-    width: 35px; /* Adjust width */
+    font-size: 18px; 
+    padding: 8px; 
+    height: 35px; 
+    width: 35px; 
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import "./Galpromise.css";
-import founderImage from "../assets/founder.jpeg"; // Import the image
+import founderImage from "../assets/founder.jpeg"; 
 
 const Galpromise = () => {
   return (

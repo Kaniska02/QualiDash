@@ -4,7 +4,6 @@ const Contact = require('../models/Contact');
 
 const router = express.Router();
 
-// Email Configuration
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
@@ -13,7 +12,6 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-// Contact Form Route
 router.post('/contact', async (req, res) => {
   const { name, email, mobile, message } = req.body;
 
@@ -27,11 +25,11 @@ router.post('/contact', async (req, res) => {
   try {
     await newContact.save();
 
-    // Send email notification
+    
     const mailOptions = {
-      from: process.env.EMAIL_USER, // Company's email address
-      to: process.env.EMAIL_USER, // Company's email address from environment variables
-      replyTo: email, // User's email address from input box
+      from: process.env.EMAIL_USER, 
+      to: process.env.EMAIL_USER, 
+      replyTo: email, 
       subject: 'New Contact Form Submission',
       text: `You have a new contact form submission:\n\nName: ${name}\nEmail: ${email}\nMobile: ${mobile}\nMessage: ${message}` // Use backticks for template literals
     };
